@@ -2,11 +2,11 @@
   "name": "mapstudio-api-hono",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "studio": "drizzle-kit studio",
-    "migration:generate": "drizzle-kit generate",
-    "migrate": "drizzle-kit migrate",
-    "migration:amend": "drizzle-kit drop && drizzle-kit generate",
-    "migration:drop": "drizzle-kit drop"
+    "studio": "bunx --bun drizzle-kit studio",
+    "migration:generate": "bunx --bun drizzle-kit generate",
+    "migrate": "bunx --bun drizzle-kit migrate",
+    "migration:amend": "bunx --bun drizzle-kit drop && drizzle-kit generate",
+    "migration:drop": "bunx --bun drizzle-kit drop"
   },
   "dependencies": {
     "drizzle-orm": "^0.33.0",
