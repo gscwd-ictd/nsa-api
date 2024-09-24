@@ -1,4 +1,4 @@
-import { appConfig } from "@mapstudio/config/env";
+import { appConfig } from "@nsa/config/env";
 import { Redis } from "ioredis";
 
 export const redis = new Redis(appConfig.redisPort, appConfig.redisHost, {
