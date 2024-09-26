@@ -1,7 +1,7 @@
 {
   "name": "nsa",
   "scripts": {
-    "dev": "bun run --hot src/index.ts",
+    "dev": "bun run --watch src/index.ts",
     "studio": "bun drizzle-kit studio",
     "migration:generate": "bun drizzle-kit generate",
     "migrate": "bun drizzle-kit migrate",
@@ -9,6 +9,7 @@
     "migration:drop": "bun drizzle-kit drop"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.2.2",
     "drizzle-orm": "^0.33.0",
     "hono": "^4.6.2",
     "ioredis": "^5.4.1",
