@@ -1,4 +1,4 @@
-import { appConfig } from "@mapstudio/config/env";
+import { appConfig } from "@nsa/config/env";
 import { defineConfig } from "drizzle-kit";
 
 export default defineConfig({

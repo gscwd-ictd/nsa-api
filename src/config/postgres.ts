@@ -1,4 +1,4 @@
-import { appConfig } from "@mapstudio/config/env";
+import { appConfig } from "@nsa/config/env";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 
@@ -10,4 +10,4 @@ const client = postgres({
   database: appConfig.dbName,
 });
 
-export const db = drizzle(client);
+export const db = drizzle(client, { logger: true });
