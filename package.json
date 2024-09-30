@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@hono/zod-validator": "^0.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
     "drizzle-orm": "^0.33.0",
+    "eslint-plugin-drizzle": "^0.2.3",
     "hono": "^4.6.2",
     "ioredis": "^5.4.1",
     "postgres": "^3.4.4",

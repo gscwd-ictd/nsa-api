@@ -9,7 +9,7 @@ export const applicants = pgTable("applicants", {
   email: varchar("email", { length: 50 }),
   birthdate: date("birth_date", { mode: "string" }).notNull(),
   sex: sexEnum("sex").notNull(),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-  updatedAt: timestamp("updated_at").notNull().defaultNow(),
-  deletedAt: timestamp("deleted_at"),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  deletedAt: timestamp("deleted_at", { withTimezone: true }),
 });

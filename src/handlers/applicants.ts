@@ -2,26 +2,16 @@ import { db } from "@nsa/config/postgres";
 import { Hono } from "hono";
 import { applicants } from "@nsa/db/schema/applicants";
 import { eq } from "drizzle-orm";
-import { z } from "zod";
 import { zValidator } from "@hono/zod-validator";
-
-export const ApplicantSchema = z.object({
-  name: z.string(),
-  address: z.string(),
-  email: z.string().email(),
-  birthdate: z.string().date(),
-  sex: z.enum(["male", "female"]),
-});
+import { ApplicantSchema } from "@nsa/types/applicant.schema";
 
 const app = new Hono();
 
 app
   .get("/", async (c) => {
     try {
-      const prepare = db.select().from(applicants).prepare("applicants");
-
+      const prepare = db.select().from(applicants).prepare("applicant");
       const result = await prepare.execute();
-
       return c.json(result, 200);
     } catch (error) {
       console.error("Error fetching applicants: ", error);
